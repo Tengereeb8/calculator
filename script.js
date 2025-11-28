@@ -120,6 +120,18 @@ function calculate() {
   operation = null;
   previousOperand = null;
   isNewInput = true;
+  // Inside your calculate() function, just before updating the display:
+
+  // ... after calculating the result:
+  // let computation; // ... calculation happens here
+
+  // Step 1: Round the result to a manageable number of decimal places (e.g., 10)
+  const roundedResult = parseFloat(computation.toFixed(10));
+
+  // Step 2: Display the rounded result (which is now a normal-looking number)
+  currentOperand = roundedResult.toString();
+
+  // ... rest of the calculate function
   updateDisplay();
 }
 
